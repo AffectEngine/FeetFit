@@ -1,0 +1,51 @@
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore Django's migration files
+*.sqlite3
+*.db
+*.log
+*.pot
+*.pyc
+*.po
+__pycache__/
+db.sqlite3
+
+# Ignore development and runtime files
+*.bak
+*.swp
+*.tmp
+*.pid
+*.vscode/
+*.idea/
+
+# Ignore environment-specific settings
+*.env
+.env
+venv/
+env/
+env3/
+*.env.*
+.env.*
+
+# Ignore editor-specific files
+.vscode/
+.idea/
+
+# Ignore system and hidden files
+.DS_Store
+Thumbs.db
+
+# Ignore static and media files (these should be collected separately in production)
+staticfiles/
+media/
+
+# Ignore local settings
+local_settings.py
+
+# Ignore compiled JavaScript and CSS
+*.js.map
+*.css.map
