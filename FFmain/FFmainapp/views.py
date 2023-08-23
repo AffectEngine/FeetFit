@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def home(request):
+	return render(request, 'FFmainapp/Main_Logic/start_page.html')
