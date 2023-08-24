@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fast Food Paradise</title>
+	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+	<!-- Add Bootstrap CSS link here -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}" >
+</head>
+<body style="background-color: #1E222D; color: #FAFDFF;">
+<header>
+	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1E222D;">
+		<div class="container d-flex justify-content-center align-items-center">
+			<ul class="navbar-nav d-flex justify-content-between">
+				<li class="nav-item">
+					<a class="nav-link" href="/FFmain/FFmainapp/static" style="color: #fafdff;">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/blog/" style="color: #fafdff;">Blog</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/contact/" style="color: #fafdff;">Contact</a>
+				</li>
+
+				<a class="navbar-brand" href="/FFmain/FFmainapp/static"
+				   style="color: #b91720; padding: 0; margin-left: 50px; margin-right: 50px">
+					Fast Food Paradise
+				</a>
+
+				<li class="nav-item">
+					<a class="nav-link" href="/orders/" style="color: #fafdff;">Orders</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle menu-toggle" href="#" id="menuDropdown" role="button"
+					   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #fafdff;">
+						Menu
+					</a>
+					<div class="dropdown-menu" aria-labelledby="menuDropdown" style="background-color: #1E222D;">
+						<a class="dropdown-item" href="/menu/burgers/" style="color: #FAFDFF;">Burgers</a>
+						<a class="dropdown-item" href="/menu/pizzas/" style="color: #FAFDFF;">Pizzas</a>
+						<!-- Add more categories here -->
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</header>
+<style>
+    .item {
+        margin-bottom: 120px; /* Add more spacing between items */
+    }
+
+
+    .dropdown-menu a.dropdown-item:hover {
+        background-color: red; /* Change to the desired color */
+        color: white; /* Change to the desired text color */
+    }
+
+    .arrow-bottom::after {
+        display: none;
+    }
+
+    .arrow-bottom {
+        position: relative;
+    }
+
+    .arrow-bottom::before {
+        content: "\f078"; /* Unicode character for angle-down icon */
+        font-family: 'Font Awesome 5 Free'; /* Make sure to include the Font Awesome font-family */
+        font-weight: 900;
+        position: absolute;
+        bottom: -10px; /* Adjust this value to control the distance from the text */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 12px; /* Adjust the font size as needed */
+    }
+
+</style>
+{% block content %}{% endblock %}
+</body>
+</html>

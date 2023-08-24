@@ -1,0 +1,137 @@
+{% extends "../layout/mainapp_base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+{% block content %}
+	<section class="hero text-center" style="margin-bottom: 15px;">
+		<h2>Welcome to Fast Food Paradise!</h2>
+		<p style="margin-bottom: 20px">Indulge in our mouthwatering burgers, crispy fries, and more.</p>
+		<a href="/menu/" class="btn btn-primary cta-button"
+		   style="padding: 10px 20px; font-size: 36px; background-color: #FF0000; border-color: #FF0000; color: #FAFDFF;">View
+			Menu</a>
+	</section>
+
+	<section class="featured-items">
+		<div class="container">
+			<h2 class="text-center" style="margin-bottom: 20px">Featured Items</h2>
+			<div class="row gx-5 gy-5">
+				<!-- Row 1 -->
+				<div class="col-md-4">
+					<div class="item">
+						<img src="{% static 'img/cheeseburger.jpg' %}" alt="Cheeseburger" class="img-fluid">
+						<h2>Cheeseburger</h2>
+						<p>A classic favorite topped with melted cheese.</p>
+						<span class="price">$7.99</span>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="item">
+						<img src="{% static 'img/fries.jpg' %}" alt="Crispy Fries" class="img-fluid">
+						<h2>Crispy Fries</h2>
+						<p>Golden and crispy fries seasoned to perfection.</p>
+						<span class="price">$3.49</span>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="item">
+						<img src="{% static 'img/pizza_pepperoni.jpg' %}" alt="Pepperoni Pizza" class="img-fluid">
+						<h2>Pepperoni Pizza</h2>
+						<p>Delicious pizza topped with pepperoni slices.</p>
+						<span class="price">$11.99</span>
+					</div>
+				</div>
+			</div>
+			<div class="row gx-5 gy-5">
+				<!-- Row 2 -->
+				<div class="col-md-4">
+					<div class="item">
+						<img src="{% static 'img/sandwich.jpg' %}" alt="Grilled Chicken Sandwich" class="img-fluid">
+						<h2>Grilled Chicken Sandwich</h2>
+						<p>Tender grilled chicken in a freshly baked bun.</p>
+						<span class="price">$6.99</span>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="item">
+						<img src="{% static 'img/soda.jpg' %}" alt="Soft Drink" class="img-fluid">
+						<h2>Soft Drink</h2>
+						<p>Refreshing carbonated beverages in various flavors.</p>
+						<span class="price">$1.99</span>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="item">
+						<img src="{% static 'img/ice_cream.jpg' %}" alt="Ice Cream Sundae" class="img-fluid">
+						<h2>Ice Cream Sundae</h2>
+						<p>Indulgent ice cream sundae with toppings.</p>
+						<span class="price">$4.99</span>
+					</div>
+				</div>
+			</div>
+			<div class="row gx-5 gy-5">
+				<!-- Row 3 -->
+				<div class="col-md-4">
+					<div class="item">
+						<img src="{% static 'img/hotdog.jpg' %}" alt="Hot Dog" class="img-fluid">
+						<h2>Hot Dog</h2>
+						<p>Classic hot dog served with your favorite toppings.</p>
+						<span class="price">$3.99</span>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="item">
+						<img src="{% static 'img/chicken_nuggets.jpg' %}" alt="Chicken Nuggets" class="img-fluid">
+						<h2>Chicken Nuggets</h2>
+						<p>Golden and crispy chicken nuggets for a quick snack.</p>
+						<span class="price">$4.49</span>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="item">
+						<img src="{% static 'img/choco_sundae.jpg' %}" alt="Sundae" class="img-fluid">
+						<h2>Sundae</h2>
+						<p>Delightful sundae with a mix of flavors and toppings.</p>
+						<span class="price">$3.99</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="about text-center pt-5 pb-5">
+		<!-- ... about content ... -->
+	</section>
+
+	<footer class="text-center pt-4 pb-4" style="background-color: #B91720;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<p>Contact Us: example@example.com</p>
+				</div>
+				<div class="col-md-6">
+					<p>&copy; 2023 Fast Food Paradise. All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Include Bootstrap JS and jQuery scripts here -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- Add the jQuery script here -->
+	<script>
+	    $(document).ready(function () {
+	        $('.nav-item.dropdown').hover(function () {
+	            $(this).addClass('show');
+	            $(this).find('.dropdown-menu').addClass('show');
+	        }, function () {
+	            $(this).removeClass('show');
+	            $(this).find('.dropdown-menu').removeClass('show');
+	        });
+	    });
+	</script>
+{% endblock %}
+</body>
+</html>
+
